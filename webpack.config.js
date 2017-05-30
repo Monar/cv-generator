@@ -51,6 +51,8 @@ module.exports = {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new HtmlWebpackPlugin({ title: 'cv' })
+    new HtmlWebpackPlugin({
+      title: 'cv'
+    })
   ]
 };

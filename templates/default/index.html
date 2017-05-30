@@ -1,0 +1,118 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+<div id="portrait">
+  <img src="{{photo}}"/>
+</div>
+
+<div id="top">
+  <span class="title"/>
+    {{ title }}
+  </span>
+  <span class="name">
+    {{ name }}
+  </span>
+</div>
+
+<div id="left">
+
+  <div class="email">
+    <i class="icon fa fa-envelope-o"/></i>
+    <a href="mailto:{{ email }}"> {{ email }} </a>
+  </div>
+
+  <div class="phone">
+    <i class="icon fa fa-phone"/></i>
+    <a href="tel:{{ phone }}"> {{ phone }}</a>
+  </div>
+
+  <div class="profiles">
+    {% for profile in profiles %}
+    <div class="profile">
+      {% if profile.icon %}
+      <i class="icon fa fa-{{ profile.icon | lower }}"/></i>
+      {% else %}
+      <div class="icon"> {{ profile.network }} </div>
+      {% endif %}
+      <a target="_blank" href="{{ profile.url }}">{{ profile.username }}</a>
+    </div>
+    {% endfor %}
+  </div>
+
+  <div class="address">
+    <i class="icon fa fa-map-marker"/></i>
+    <div>
+      {{ location.street }} <br/>
+      {{ location.postalCode }} {{ location.city }} <br/>
+    </div>
+  </div>
+
+  <ul class="skills">
+    <h3>Skills</h3>
+    {% for skill in skills %}
+    <li class="skill">
+      {{ skill }}
+    </li>
+    {% endfor %}
+  </ul>
+
+  <ul class="interests">
+    <h3>Interests</h3>
+    {% for interest in interests %}
+    <li class="interest">
+      {{ interest }}
+    </li>
+    {% endfor %}
+  </ul>
+
+</div>
+
+<div id="right">
+  <div class="employment">
+    <h2>Employment</h2>
+    {% for job in work %}
+    <div class="job">
+      <div class="company">
+        {{ job.company }}
+      </div>
+      <div class="period">
+        {{ job.startDate }} - {{ job.endDate }}
+      </div>
+      <div class="position">
+        {{ job.position }}
+      </div>
+      <div class="description">
+        {{ job.description }}
+      </div>
+    </div>
+    {% endfor %}
+
+  </div>
+
+  <div class="education">
+    <h2>Education</h2>
+    {% for university in education %}
+    <div class="university">
+      <div class="name">
+        {{ university.university }}
+      </div>
+      <div class="period">
+        {{ university.period }}
+      </div>
+      <div class="faculty">
+        {{ university.faculty }}
+      </div>
+      <div class="area">
+        {{ university.area }}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<footer>
+  Wyrażam zgodę na przetwarzanie moich danych osobowych dla potrzeb
+  niezbędnych do realizacji procesu rekrutacji (zgodnie z Ustawą z dnia
+  29.08.1997 roku o Ochronie Danych Osobowych; tekst jednolity: Dz. U. 2016
+  r. poz. 922).
+</footer>

@@ -1,11 +1,11 @@
 import nunjucks from 'nunjucks';
 
 import './base.scss';
-import './template.scss';
-import temp from './template.html';
+import './template/index.scss';
+import temp from './template/index.html';
 
-import data from './cv.yaml';
-import photo from './photo.jpg';
+import data from '../data/cv.yaml';
+import photo from '../data/photo.jpg';
 
 
 nunjucks.configure({ autoescape: true });

@@ -6,4 +6,5 @@ yarn-debug.log*
 yarn-error.log*
 
 dist/
+data/
 node_modules/
