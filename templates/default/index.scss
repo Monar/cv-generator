@@ -3,11 +3,11 @@
   font-family: 'Lato', sans-serif;
   font-size: 14px;
 
-    width: 21cm;
-    height: 29.7cm;
-    padding: 0.5cm;
+  width: 21cm;
+  height: 29.7cm;
+  padding: 0.5cm;
   grid-template-columns: 6.5cm 13.5cm;
-  grid-template-rows: 4cm auto 2cm;
+  grid-template-rows: 3cm auto 1cm;
   min-height: 100%;
 }
 
@@ -15,7 +15,7 @@ a {
   text-decoration: none;
 }
 
-a:visited a:link {
+a:visited, a:active, a:link {
   color: blue;
 }
 
@@ -28,7 +28,7 @@ h3 {
   grid-column: 1;
   display: flex;
   justify-content: center;
-  clip-path: circle(75px at center);
+  clip-path: circle(70px at center);
 
   img {
     height: 100%;
@@ -131,6 +131,13 @@ ul {
       }
 
       .position {
+      }
+      
+      .buzzwords {
+        grid-column: 1 / span 2;
+        font-size: 12px;
+        margin-top: 0.1cm;
+        font-style: italic;
       }
 
       .description {
