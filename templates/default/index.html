@@ -39,14 +39,6 @@
     {% endfor %}
   </div>
 
-  <div class="address">
-    <i class="icon fa fa-map-marker"/></i>
-    <div>
-      {{ location.street }} <br/>
-      {{ location.postalCode }} {{ location.city }} <br/>
-    </div>
-  </div>
-
   <ul class="skills">
     <h3>Skills</h3>
     {% for skill in skills %}
@@ -61,6 +53,30 @@
     {% for interest in interests %}
     <li class="interest">
       {{ interest }}
+    </li>
+    {% endfor %}
+  </ul>
+
+  <ul class="education">
+    <h3>Education</h3>
+    {% for university in education %}
+    <li class="university">
+        <span class="block name"> {{ university.university }} </span>
+      <ul>
+        {% if university.faculty %}
+        <li class="faculty">
+          <span class="block">{{ university.faculty }} </span>
+        </li>
+        {% endif %}
+        <li class="area">
+          <span class="block"> {{ university.area }} </span>
+        </li>
+        <li>
+          <span class="period">
+            {{ university.period }}
+          </span>
+        </li>
+      </ul>
     </li>
     {% endfor %}
   </ul>
@@ -83,27 +99,6 @@
       </div>
       <div class="description">
         {{ job.description }}
-      </div>
-    </div>
-    {% endfor %}
-
-  </div>
-
-  <div class="education">
-    <h2>Education</h2>
-    {% for university in education %}
-    <div class="university">
-      <div class="name">
-        {{ university.university }}
-      </div>
-      <div class="period">
-        {{ university.period }}
-      </div>
-      <div class="faculty">
-        {{ university.faculty }}
-      </div>
-      <div class="area">
-        {{ university.area }}
       </div>
     </div>
     {% endfor %}
