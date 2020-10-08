@@ -23,32 +23,7 @@ h3 {
   margin-top: 0;
 }
 
-#portrait {
-  grid-row: 1;
-  grid-column: 1;
-  display: flex;
-  justify-content: center;
-  clip-path: circle(70px at center);
-
-  img {
-    height: 100%;
-  }
-}
-
 #top {
-  grid-row: 1;
-  grid-column: 2;
-  align-self: center;
-  justify-self: center;
-
-  .title {
-    font-size: 24px;
-  }
-
-  .name {
-    font-size: 36px;
-    font-weight: bold;
-  }
 }
 
 ul {

@@ -1,28 +1,47 @@
 {
   "name": "cv-generator",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Simple curriculum vitae generator",
   "main": "index.js",
-  "scripts": {
-    "start": "webpack-dev-server",
-    "build": "webpack"
-  },
   "author": "Piotr Tomasz Monarski",
   "license": "MIT",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "build": "NODE_ENV=production webpack",
+    "ts": "tsc --noEmit",
+    "test": "jest",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx ./src",
+    "lint:fix": "eslint --fix --ext .js,.jsx,.ts,.tsx ./src"
+  },
+  "devDependencies": {
+    "@babel/core": "7.11.6",
+    "@emotion/babel-preset-css-prop": "10.0.27",
+    "@pmmmwh/react-refresh-webpack-plugin": "0.4.2",
+    "@types/lodash": "4.14.161",
+    "@types/react": "16.9.50",
+    "@types/react-dom": "16.9.8",
+    "awesome-typescript-loader": "5.2.1",
+    "babel-loader": "8.1.0",
+    "babel-plugin-emotion": "10.0.33",
+    "eslint": "7.10.0",
+    "eslint-config-monar": "2.0.1",
+    "file-loader": "6.1.0",
+    "html-webpack-plugin": "4.5.0",
+    "lodash-webpack-plugin": "0.11.5",
+    "prettier": "2.1.2",
+    "react-refresh": "0.8.3",
+    "typescript": "3.9.7",
+    "webpack": "4.44.2",
+    "webpack-cli": "3.3.12",
+    "webpack-dev-server": "3.11.0"
+  },
   "dependencies": {
-    "css-loader": "^0.28.2",
-    "file-loader": "^0.11.1",
-    "html-webpack-plugin": "^2.28.0",
-    "image-webpack-loader": "^3.3.1",
-    "json-loader": "^0.5.4",
-    "node-sass": "^4.5.3",
-    "nunjucks": "^3.0.1",
-    "nunjucks-loader": "^2.4.8",
-    "sass-loader": "^6.0.5",
-    "style-loader": "^0.18.1",
-    "webpack": "^2.6.0",
-    "webpack-dev-middleware": "^1.10.2",
-    "webpack-dev-server": "^2.4.5",
-    "yaml-loader": "^0.4.0"
+    "@emotion/core": "10.0.35",
+    "@emotion/styled": "10.0.27",
+    "lodash": "4.17.20",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-use": "15.3.4",
+    "utility-types": "3.10.0"
   }
 }
