@@ -1,0 +1,172 @@
+#paper {
+  display: grid;
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  grid-template-columns: 5cm 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "avatar employment"
+    "name employment"
+    "left employment" 
+    "footer footer" 
+    ;
+  min-height: 100%;
+  grid-gap: 0.2cm;
+}
+
+a {
+  text-decoration: none;
+    color: blue;
+  &:visited { 
+    color: blue;
+  }
+}
+
+#portrait {
+  grid-area: avatar;
+  display: flex;
+  justify-content: center;
+
+  img {
+    height: 2.6cm;
+    clip-path: circle(49px at center);
+  }
+}
+
+#top {
+  grid-area: name;
+  align-self: center;
+  justify-self: center;
+
+  .title {
+    font-size: 14px;
+    font-weight: bold;
+    display: block;
+  }
+
+  .name {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+  }
+}
+
+ul {
+  list-style-position: inside;
+}
+
+#left {
+  display: flex;
+  flex-flow: column nowrap;
+  font-size: 14px;
+  grid-area: left;
+
+  .email,
+  .phone,
+  .profiles,
+  .address,
+  .skills,
+  .languages,
+  .interests {
+    padding: 0;
+  }
+
+  .email,
+  .phone,
+  .profile {
+    display: flex;
+    align-items: center;
+    margin: 0.12cm 0;
+  }
+
+  .icon {
+    width: 0.8cm;
+    height: 11px;
+  }
+
+  .education {
+    .degree {
+      margin-block-start: -1.3em;
+      margin-block-end: 0.83em;
+      font-style: italic;
+      font-weight: bold;
+      font-size: 14px;
+    }
+    .university {
+      font-size: 14px;
+      text-wrap: wrap;
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: auto auto auto;
+      padding-bottom: .2cm;
+
+      .name {
+        font-weight: bold;
+        padding-bottom: .2cm;
+      }
+
+      .period {
+        font-size: 14px;
+        font-weight: 100;
+        text-align: center;
+        white-space: nowrap;
+      }
+
+      .faculty, .area {
+        grid-column: 1;
+        font-style: italic;
+      }
+    }
+  }
+}
+
+#right {
+  grid-area: employment;
+  font-size: 14px;
+
+  h3 {
+    margin-top: 8px;
+    margin-bottom: 12px;
+  }
+
+  .employment {
+    .job {
+      display: grid;
+      grid-template-columns: 1fr 4cm;
+      grid-template-rows: auto auto auto;
+      padding-bottom: .2cm;
+
+      .company {
+        font-weight: bold;
+      }
+
+      .period {
+        text-align: end;
+      }
+
+      .position {
+      }
+
+      .buzzwords {
+        margin-top: 4px;
+        font-style: italic;
+        grid-column: 1 / span 2;
+        font-size: 12px;
+      }
+
+      .description {
+        border-left: 0.1cm solid lightgray;
+        margin-top: 0.1cm;
+        padding-left: 0.4cm;
+        grid-column: 1 / span 2;
+      }
+    }
+  }
+
+}
+
+footer {
+  font-size: 8px;
+  grid-area: footer;
+  text-align: justify;
+}

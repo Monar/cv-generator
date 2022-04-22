@@ -16,19 +16,21 @@ profiles:
     url: http://twitter.com/john
 
 work:
-- company: Company
-  position: President
-  website: http://company.com
-  startDate: 'May 2013'
-  endDate: 'Jun 2014'
-  description: Description...
+  - company: Company
+    position: Tech Lead
+    startDate: '11.2020'
+    endDate: 'present'
+    buzzwords:
+      gitlab, some-lang, other-lang, some-tech, other-tech
+    description:
+      All the staff that I did were so awesome!
 
 education:
-- university: University
-  faculty: Faculty
-  area: Software Development
-  studyType: Bachelor
-  period: '2011-2013'
+  - university: University
+    faculty: Faculty
+    area: Software Development
+    studyType: Bachelor
+    period: '2011-2013'
 
 skills:
   - Web Development
