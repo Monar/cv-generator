@@ -13,12 +13,17 @@ created my own :D
 ## How to use it
 
 ```bashs
-npm i
+yarn
 ```
 And then
 
 ``` bash 
-npm start
+yarn start
+```
+
+## To change template
+```bash
+ln -sfT ../templates/{template name} src/template
 ```
 
 To export your cv to pdf, just print the page and set margins to none in print setup.
