@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 
 <div id="portrait">
@@ -17,12 +17,12 @@
 <div id="left">
 
   <div class="email">
-    <i class="icon fa fa-envelope-o"/></i>
+    <i class="icon fa-lg far fa-envelope"/></i>
     <a href="mailto:{{ email }}"> {{ email }} </a>
   </div>
 
   <div class="phone">
-    <i class="icon fa fa-phone"/></i>
+    <i class="icon fa-lg fas fa-phone"/></i>
     <a href="tel:{{ phone }}"> {{ phone }}</a>
   </div>
 
@@ -30,21 +30,13 @@
     {% for profile in profiles %}
     <div class="profile">
       {% if profile.icon %}
-      <i class="icon fa fa-{{ profile.icon | lower }}"/></i>
+      <i class="icon fab fa-lg fa-{{ profile.icon | lower }}"/></i>
       {% else %}
       <div class="icon"> {{ profile.network }} </div>
       {% endif %}
       <a target="_blank" href="{{ profile.url }}">{{ profile.username }}</a>
     </div>
     {% endfor %}
-  </div>
-
-  <div class="address">
-    <i class="icon fa fa-map-marker"/></i>
-    <div>
-      {{ location.street }} <br/>
-      {{ location.postalCode }} {{ location.city }} <br/>
-    </div>
   </div>
 
   <ul class="skills">
@@ -65,11 +57,29 @@
     {% endfor %}
   </ul>
 
+  <div class="education">
+    <h2>Education</h2>
+    {% if degree %}
+    <div class="degree"> {{ degree }} </div>
+    {% endif %}
+    {% for university in education %}
+    <div class="university">
+      <div class="name">
+        {{ university.university }}
+        <span class="period">
+          {{ university.period }}
+        </span>
+      </div>
+      <div class="faculty">
+        {{ university.faculty }}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
 </div>
 
 <div id="right">
   <div class="employment">
-    <h2>Employment</h2>
     {% for job in work %}
     <div class="job">
       <div class="company">
@@ -84,35 +94,16 @@
       <div class="description">
         {{ job.description }}
       </div>
+      <div class="buzzwords">
+        {{ job.buzzwords }}
+      </div>
     </div>
     {% endfor %}
 
   </div>
 
-  <div class="education">
-    <h2>Education</h2>
-    {% for university in education %}
-    <div class="university">
-      <div class="name">
-        {{ university.university }}
-      </div>
-      <div class="period">
-        {{ university.period }}
-      </div>
-      <div class="faculty">
-        {{ university.faculty }}
-      </div>
-      <div class="area">
-        {{ university.area }}
-      </div>
-    </div>
-    {% endfor %}
-  </div>
 </div>
 
 <footer>
-  Wyrażam zgodę na przetwarzanie moich danych osobowych dla potrzeb
-  niezbędnych do realizacji procesu rekrutacji (zgodnie z Ustawą z dnia
-  29.08.1997 roku o Ochronie Danych Osobowych; tekst jednolity: Dz. U. 2016
-  r. poz. 922).
+  I agree to the processing of personal data provided in this document for realising the recruitment process pursuant to the Personal Data Protection Act of 10 May 2018 (Journal of Laws 2018, item 1000) and in agreement with Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (General Data Protection Regulation).
 </footer>
